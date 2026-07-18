@@ -11,12 +11,16 @@ CapturePro is a free, local-first screen capture app for Windows and macOS. Take
 
 ## Download
 
+**Latest: v0.1.0 (beta)**
+
 | Platform | Requirements | Download |
 |----------|--------------|----------|
-| **Windows** | Windows 10 or later | [CapturePro-Setup.exe](https://capturepro.dev/downloads/CapturePro-Setup.exe) |
-| **macOS** | macOS 13 Ventura or later | [CapturePro.dmg](https://capturepro.dev/downloads/CapturePro.dmg) |
+| **Windows (x64)** | Windows 10 or later | [CapturePro-Setup.exe](https://capturepro.dev/downloads/CapturePro-Setup.exe) |
+| **Windows (ARM64)** | Windows 10 or later | [CapturePro-Setup-arm64.exe](https://capturepro.dev/downloads/CapturePro-Setup-arm64.exe) |
+| **macOS (Apple Silicon)** | macOS 13 Ventura or later | [CapturePro.dmg](https://capturepro.dev/downloads/CapturePro.dmg) |
+| **macOS (Intel)** | macOS 13 Ventura or later | [CapturePro-x64.dmg](https://capturepro.dev/downloads/CapturePro-x64.dmg) |
 
-You can also grab the latest installers from [GitHub Releases](https://github.com/harshkolte01/capturepro/releases/latest).
+Download links always point to the [latest GitHub Release](https://github.com/harshkolte01/capturepro/releases/latest). You can also browse all versions on the [releases page](https://github.com/harshkolte01/capturepro/releases).
 
 ---
 
@@ -81,12 +85,15 @@ Read the full policy at [capturepro.dev/privacy](https://capturepro.dev/privacy)
 
 See [capturepro.dev/changelog](https://capturepro.dev/changelog) for release notes.
 
-### v1.0.0 — July 2026
+### v0.1.0 — July 2026 (beta)
 
-- Initial public release for Windows and macOS
+- Beta release for Windows and macOS
+- Windows x64 and ARM64 installers
+- macOS Apple Silicon and Intel builds
 - Screenshots, screen recording, and scrolling capture
 - Built-in editor with annotations, effects, and OCR
-- Pin screenshots and Quick Access overlay
+
+Full release: [github.com/harshkolte01/capturepro/releases/tag/0.1.0](https://github.com/harshkolte01/capturepro/releases/tag/0.1.0)
 
 ---
 
@@ -102,13 +109,22 @@ The marketing website lives separately at [capturepro.dev](https://capturepro.de
 
 Releases are published manually via GitHub Releases.
 
-1. Tag the release commit (e.g. `v1.0.0`)
+1. Tag the release commit (e.g. `0.1.0`)
 2. Create a new [GitHub Release](https://github.com/harshkolte01/capturepro/releases/new) from that tag
-3. Upload installers with these exact asset names:
-   - `CapturePro-Setup.exe`
-   - `CapturePro.dmg`
+3. Upload installers using this naming pattern:
+   - `CapturePro-{version}-x64-Setup.exe`
+   - `CapturePro-{version}-arm64-Setup.exe`
+   - `CapturePro-{version}-arm64.dmg`
+   - `CapturePro-{version}-x64.dmg`
 4. Write release notes and mark the release as **Latest**
 
-The website download links at `capturepro.dev/downloads/*` redirect to the latest GitHub release assets, so users always get the newest build without updating the site.
+The website resolves the latest release automatically. Stable download URLs on [capturepro.dev](https://capturepro.dev) always serve the newest build:
 
-After publishing, update the changelog at [capturepro.dev/changelog](https://capturepro.dev/changelog).
+| URL | Resolves to |
+|-----|-------------|
+| `/downloads/CapturePro-Setup.exe` | Latest Windows x64 |
+| `/downloads/CapturePro-Setup-arm64.exe` | Latest Windows ARM64 |
+| `/downloads/CapturePro.dmg` | Latest macOS Apple Silicon |
+| `/downloads/CapturePro-x64.dmg` | Latest macOS Intel |
+
+After publishing, update the changelog in this README and at [capturepro.dev/changelog](https://capturepro.dev/changelog).
